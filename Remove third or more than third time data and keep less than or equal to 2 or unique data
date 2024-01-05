@@ -1,7 +1,7 @@
 {
 
   # Remove third or more than third time data and keep less than or equal to 2 or unique data
-  counts = df.groupby(['edge_id', 'day_id', 'time_id', 'speed']).cumcount()+1
+  counts = df.groupby(['edge_id', 'day_id', 'time_id', 'speed']).cumcount()+1  # change df by actual dataframe and stings inside square brackets by column names
   df2 = df[counts <= 2]
   print(df2)
 }
